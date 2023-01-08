@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    {% if checkforgreet == 1 %}
+    <script type="text/javascript">
+        alert('Record saved!');
+    </script>
+    {% endif %}
+    <h1>hey there!</h1>
+    <p>this is Home page</p>
+    <p>go to /signup for signing up <a href="{% url 'signup' %}">OR CLICK HERE </a> </p>
+    <p>go to /userlist to see current users <a href="{% url 'userlist' %}">OR CLICK HERE </a></p>
+
+
+
+</body>
+
+</html>

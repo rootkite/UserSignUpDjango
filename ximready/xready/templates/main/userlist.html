@@ -1,0 +1,38 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Users</title>
+</head>
+
+<body>
+    <h1>Here are the List of our Users : </h1>
+
+    {% if userdicthere %}
+
+    <ol>
+        {% for person in userdicthere %}
+        <li>User info</li>
+        <ul>
+            <li>First Name : {{person.fname}}</li>
+            <li>Last Name : {{person.lname}}</li>
+            <li>Address : {{person.address}}</li>
+            <li>Email: {{person.email}}</li>
+            <li>phone Number : {{person.phone_number}}</li>
+            <li>Favorite Movie: {{person.favorite_movie}}</li>
+        </ul>
+        {% endfor %}
+    </ol>
+
+
+    {% endif %}
+
+    <p><a href="{% url 'index' %}">click here to return Home</a></p>
+
+
+</body>
+
+</html>
